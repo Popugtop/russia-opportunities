@@ -4,8 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "80:80"
-      - "443:443"
+      - "127.0.0.1:8080:80"
     volumes:
       # Persistent storage for TLS certificates (Caddy auto-HTTPS)
       - caddy_data:/data
