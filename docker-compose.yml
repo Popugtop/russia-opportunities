@@ -1,0 +1,20 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # Persistent storage for TLS certificates (Caddy auto-HTTPS)
+      - caddy_data:/data
+      # Persistent storage for Caddy config
+      - caddy_config:/config
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:

@@ -1,0 +1,18 @@
+# Зависимости
+node_modules
+.pnp
+.pnp.js
+
+# Сборка (билды)
+dist
+dist-ssr
+
+# Логи и локальные файлы
+logs
+*.log
+npm-debug.log*
+.env
+.env.local
+
+# Системные файлы (особенно актуально для твоего Мака)
+.DS_Store
